@@ -1,0 +1,12 @@
+@PACKAGE_INIT@
+
+check_required_components(MathFunctions)
+
+set(PACKAGE_NAME "${PROJECT_NAME}")
+set(PACKAGE_VERSION ${PROJECT_VERSION})
+set(PACKAGE_FIND_DIR "${CMAKE_INSTALL_PREFIX}/lib/cmake/${PROJECT_NAME}")
+
+# Define variables for include directories and libraries
+set(INCLUDE_DIRS "${MathFunctions_INCLUDE_DIRS}")
+set(LIBRARIES "${MathFunctions_LIBRARIES}")
+include("${CMAKE_CURRENT_LIST_DIR}/MathFunctionsTargets.cmake")
